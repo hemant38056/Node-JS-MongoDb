@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete</title>
+</head>
+<body>
+    <%- include('common/nav') %>
+    <center>
+        <h1>Record Manage</h1>
+        <form action="/delete_record" method="post">
+            Enter Employee Name <input type="text" name = "name" required> <br><br>
+            <button>Delete Record</button>
+        </form>
+
+        <%if(locals.message){%>
+            <h3><%=message%></h3>
+        <%}%>
+    </center>
+</body>
+</html>

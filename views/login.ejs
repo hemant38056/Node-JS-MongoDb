@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('common/nav') %>
+    <center>
+        <h1>C-Panel</h1>
+        <form action="/login" method="post">
+            Email-id : <input type="email" name="email" required> <br><br>
+            Password : <input type="password" name="password" required><br><br>
+            <button>Login</button><br><br>
+        </form>
+        <br>
+        <a href="/new_user">Create An Account?</a>
+        <%if(locals.message){%>
+            <%message%>
+        <%}%>
+    </center>
+</body>
+</html>

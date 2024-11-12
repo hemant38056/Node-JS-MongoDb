@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%-include('common/nav')%>
+    <center>
+        <h1>Employees Records</h1>
+        <br>
+        <br>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Mobile</th>
+                    <th>Address</th>
+                </tr>
+            </thead>
+            <tbody>
+                <%if(record.length > 0){ %>
+                <% record.forEach((data) => { %>
+                    <tr>
+                        <td><%=data.name%></td>
+                        <td><%=data.mobile%></td>
+                        <td><%=data.address%></td>
+                    </tr>
+                    
+                <%})
+                } 
+                else{%>
+                    <tr>
+                        <td align="center" colspan="3">No records</td>
+                    </tr>
+               <% } %>
+            </tbody>
+            
+        </table>
+    </center>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee</title>
+</head>
+<body>
+    <%- include('common/nav') %>
+    <center>
+        <h1>Add Employee</h1>
+        <br><br>
+        <form action="/" method="post">
+            Enter Name <input type="text" name="name" required><br><br>
+            Mobile <input type="number" name="mobile" required><br><br>
+            Address <textarea cols="20" rows="5" name="address"></textarea><br><br>
+            <button>Add Employee</button>
+        </form>
+
+        <%if(locals.message){%>
+            <h-><%=message%></h->
+        <%}%>
+    </center>
+</body>
+</html>
